@@ -5,18 +5,13 @@ from sklearn.linear_model import LogisticRegression
 from sklearn.metrics import accuracy_score, classification_report, confusion_matrix
 import numpy as np
 
-# Set random seed for reproducibility
 np.random.seed(0)
 
-# Generate random data
 X = np.random.rand(100, 5)
 
-# Create a target variable with both classes (0 and 1)
-# Ensure that the target variable has a mix of both classes
-# Here we create a condition that guarantees both classes
 y = np.zeros(100)
-y[:50] = 0  # First 50 samples are class 0
-y[50:] = 1  # Last 50 samples are class 1
+y[:50] = 0 
+y[50:] = 1  
 np.random.shuffle(y)  # Shuffle to mix the classes
 
 # Create DataFrame
